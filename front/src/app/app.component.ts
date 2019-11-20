@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
   constructor(private fileService: FileService) { }
   ngOnInit() { }
 
-  onChange(selected) {
+  onChange(selected): Promise<void> {
     return this.fileService.getImage(selected)
-      .subscribe(data => {
+      .then(data => {
         const reader = new FileReader();
         reader.readAsDataURL(data);
 

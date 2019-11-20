@@ -8,8 +8,8 @@ export class FileService {
 
   constructor(private _http: HttpClient) {}
 
-  getImage(selectedimg) {
+  getImage(selectedimg): Promise<File> {
     console.log(selectedimg);
-    return this._http.get<any>('https://memeg.herokuapp.com/getFile/' + selectedimg, { responseType: 'blob' as 'json' });
+    return this._http.get<any>('https://memeg.herokuapp.com/getFile/' + selectedimg, { responseType: 'blob' as 'json' }).toPromise();
   }
 }
