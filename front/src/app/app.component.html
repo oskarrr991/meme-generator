@@ -1,0 +1,38 @@
+<div class = "container">
+  <div class = "row">
+        <h1>WELCOME TO MY MEME GENERATOR :)</h1>
+
+      <div class = "col-md-6">
+          <div class = "form-group">
+            <label>Top Text: </label>
+            <input class = "form-control" [(ngModel)] = "topText">
+          </div>
+          <div class = "form-group">
+            <label>Bottom Text: </label>
+            <input class = "form-control" [(ngModel)] = "bottomText">
+          </div>
+          <div class = "form-group">
+            <label>Image: </label>
+            <select class="form-control" (change)="onChange($event.target.value)">
+                <option value="" selected disabled>Select image</option>
+                <option *ngFor="let option of imageNameList" [value]="option">{{option}}</option>
+            </select>
+          </div>
+          <div class = "form-group">
+            <label>Background Color: </label>
+            <select class="form-control" [(ngModel)] = "colorName">
+                <option>black</option>
+                <option>blue</option>
+                <option>orange</option>
+            </select>
+          </div>
+        </div>
+      <div class = "col-md-6">
+          <div [class] = "colorName">
+              <h2>{{ topText }}</h2>
+              <img [src]="" class = "img-responsive">
+              <h2 id="h2sec">{{ bottomText }}</h2>
+          </div>
+      </div>
+  </div>
+</div>

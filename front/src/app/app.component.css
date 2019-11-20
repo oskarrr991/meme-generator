@@ -1,0 +1,36 @@
+.black {
+    background-color: black;
+}
+.blue {
+    background-color: blue;
+}
+.orange {
+    background-color: orange;
+}
+
+h2 {
+    text-align: center; 
+    color: white; 
+    padding-top: 1em;
+}
+#h2sec {
+    margin-top: -0.5em;
+    padding-bottom: 1em;
+}
+.img-responsive {
+    width: 200px;
+    height: 200px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%;
+}
+.container {
+    text-align: center;
+}
+.row {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}

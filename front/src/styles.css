@@ -1,0 +1,11 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    background: url(./assets/background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    height: 100%;
+}
